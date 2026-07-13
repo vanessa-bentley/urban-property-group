@@ -1,7 +1,10 @@
 ---
+import WhyChooseUs from "../components/home/WhyChooseUs.astro";
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import WhyChooseUs from "../components/WhyChooseUs.astro";
+import Hero from "../components/home/Hero.astro";
+import Section from "../components/ui/Section.astro";
+import ServiceCard from "../components/ui/ServiceCard.astro";
+import AboutSection from "../components/home/AboutSection.astro";
 ---
 
 <Layout title="Urban Property Group">
@@ -9,5 +12,38 @@ import WhyChooseUs from "../components/WhyChooseUs.astro";
   <Hero />
 
   <WhyChooseUs />
+  
+  <Section
+    title="Our Services"
+    subtitle="Comprehensive property management designed to protect your investment."
+  >
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+      <ServiceCard
+        title="Tenant Placement"
+        description="Marketing, showings, and thorough tenant screening."
+      />
+
+      <ServiceCard
+        title="Rent Collection"
+        description="Reliable rent collection and owner distributions."
+      />
+
+      <ServiceCard
+        title="Maintenance"
+        description="Coordinating repairs with trusted vendors."
+      />
+
+      <ServiceCard
+        title="Inspections"
+        description="Routine inspections to protect your property."
+      />
+
+    </div>
+    </Section>
+
+  <AboutSection />
+
+</Layout>
 
 </Layout>
