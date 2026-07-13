@@ -1,45 +1,68 @@
-<nav>
-  <div class="container">
-    <h2>Urban Property Group</h2>
+<nav class="bg-white border-b border-border">
 
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/owners">Owners</a></li>
-      <li><a href="/tenants">Tenants</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
+  <div class="flex h-24 items-center justify-between px-6 lg:px-10">
+
+    <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img
+          src="/images/primary-logo.png"
+          alt="Urban Property Group"
+          class="h-34 w-auto"
+        />
+      </a>
+        <!-- Desktop Navigation -->
+        <ul class="flex items-center gap-8">
+
+          <li>
+            <a 
+              href="/" 
+              class="font-medium text-slate-700 transition hover:text-[#0F3D63]"
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a 
+              href="/services"
+              class="font-medium text-slate-700 transition hover:text-[#0F3D63]"
+            >
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a 
+              href="/owners"
+              class="font-medium text-slate-700 transition hover:text-[#0F3D63]"
+            >
+              Owners
+            </a>
+          </li>
+
+          <li>
+            <a 
+              href="/tenants"
+              class="font-medium text-slate-700 transition hover:text-[#0F3D63]"
+            >
+              Tenants
+            </a>
+          </li>
+
+          <li>
+            <a 
+              href="/contact"
+              class="rounded-xl bg-[#0F3D63] px-5 py-2.5 font-medium text-white transition hover:bg-[#124d7d]"
+            >
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Mobile menu placeholder -->
+  <button class="hidden">
+    ☰
+  </button>
   </div>
 </nav>
-
-<style>
-nav {
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #ddd;
-    background: white;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-a {
-    color: #374151;
-    font-weight: 500;
-}
-
-a:hover {
-    color: #0F3D63;
-}
-</style>

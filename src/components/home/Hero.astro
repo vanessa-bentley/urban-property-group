@@ -1,91 +1,67 @@
-<section class="hero">
-  <div class="container">
+---
+import Container from "../ui/Container.astro";
+---
 
-    <div class="content">
-      <h1>
-        Professional Property Management
-        for Northern Utah
-      </h1>
+<section class="py-24">
 
-      <p>
-        Urban Property Group helps rental property owners
-        protect their investments through responsive service,
-        thoughtful tenant management, and reliable systems.
-      </p>
+  <Container>
 
-      <a href="/contact" class="button">
-        Request a Rental Analysis
-      </a>
+    <div class="grid items-center gap-16 lg:grid-cols-2">
+
+      <!-- Left Side -->
+      <div>
+
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-brand-light">
+          Northern Utah Property Management
+        </p>
+
+        <h1 class="text-5xl font-bold leading-tight text-heading lg:text-6xl">
+          Property Management,
+          <br />
+          Done Personally.
+        </h1>
+
+        <p class="mt-8 max-w-xl text-lg leading-8 text-body">
+          We help Northern Utah rental property owners protect
+          their investments through organized systems,
+          responsive communication, and thoughtful property
+          management.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+
+          <a
+            href="/contact"
+              class="rounded-xl bg-heading px-7 py-3.5 text-white"
+          >
+            Schedule a Consultation
+          </a>
+
+          <a
+            href="/services"
+            class="rounded-xl border border-brand px-6 py-3 font-semibold text-brand transition hover:bg-white"
+          >
+            Our Services
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Right Side -->
+
+      <div class="relative">
+
+        <img
+          src="/images/hero-home.jpg"
+          alt="Beautiful Utah home"
+          class="relative rounded-3xl shadow-xl"
+        />
+
+      </div>
+
     </div>
 
-    <div class="image">
-      <img 
-        src="/images/hero-home.jpg"
-        alt="Beautiful Utah rental home"
-      />
-    </div>
+  </Container>
 
-  </div>
 </section>
-
-
-<style>
-.hero {
-  padding: 5rem 2rem;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-
-  align-items: center;
-}
-
-h1 {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  color: #0F3D63;
-}
-
-p {
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: #4b5563;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 2rem;
-
-  background: #0F3D63;
-  color: white;
-
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-
-  font-weight: 600;
-}
-
-.image img {
-  border-radius: 1rem;
-}
-
-
-@media(max-width: 768px) {
-
-.container {
-  grid-template-columns: 1fr;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-}
-
-</style>
