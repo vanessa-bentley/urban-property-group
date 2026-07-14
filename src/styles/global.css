@@ -39,3 +39,12 @@
 .test-color {
   color: red;
 }
+.mobile-button {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-button {
+    display: block;
+  }
+}
