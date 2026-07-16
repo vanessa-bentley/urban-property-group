@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { env } from "cloudflare:workers";
+import { Resend } from "resend";
 
 interface ContactRequest {
   name: string;
@@ -58,7 +59,24 @@ export const POST: APIRoute = async ({ request }) => {
         message ?? ""
       )
       .run();
+      // const resend = new Resend(env.RESEND_API_KEY);
 
+      // await resend.emails.send({
+      //   from: "Urban Property Group <onboarding@resend.dev>",
+      //   to: ["YOUR_EMAIL_HERE"],
+      //   subject: "New Property Management Inquiry",
+      //   html: `
+      //     <h2>New Website Inquiry</h2>
+
+      //     <p><strong>Name:</strong> ${name}</p>
+      //     <p><strong>Email:</strong> ${email}</p>
+      //     <p><strong>Phone:</strong> ${phone ?? "Not provided"}</p>
+      //     <p><strong>Property:</strong> ${property_address ?? "Not provided"}</p>
+
+      //     <h3>Message</h3>
+      //     <p>${message ?? "No message provided"}</p>
+      //   `,
+      // });
     return new Response(
       JSON.stringify({
         success: true,
