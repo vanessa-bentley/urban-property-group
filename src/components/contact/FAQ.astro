@@ -1,0 +1,53 @@
+---
+import Container from "../ui/Container.astro";
+const faqs = [
+  {
+    question: "What types of properties do you manage?",
+    answer:
+      "We manage a variety of residential rental properties, including single-family homes, townhomes, condominiums, and small multi-family properties throughout Northern Utah.",
+  },
+  {
+    question: "Which areas do you serve?",
+    answer:
+      "We proudly serve Salt Lake Valley, Davis County, and surrounding Northern Utah communities. If you're unsure whether your property is within our service area, we'd be happy to discuss it.",
+  },
+  {
+    question: "Do you help find tenants?",
+    answer:
+      "Yes. We market your property, coordinate showings, thoroughly screen applicants, and help place qualified tenants who are a good fit for your property.",
+  },
+  {
+    question: "How quickly can I get started?",
+    answer:
+      "After an initial consultation, we'll guide you through our onboarding process and work with you to begin managing your property as quickly and smoothly as possible.",
+  },
+];
+---
+<section class="pb-24">
+  <Container>
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-brand-light">
+        Frequently Asked Questions
+      </p>
+      <h2 class="text-4xl font-bold text-heading">
+        Answers to Common Questions
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-body">
+        If you don't see your question here, we'd love to hear from you.
+        We're always happy to help.
+      </p>
+    </div>
+    <div class="mx-auto mt-16 max-w-4xl space-y-6">
+      {faqs.map((faq) => (
+        <div class="rounded-2xl border border-border bg-surface p-8 shadow-sm">
+          <h3 class="text-xl font-semibold text-heading">
+            {faq.question}
+          </h3>
+          <p class="mt-4 leading-8 text-body">
+            {faq.answer}
+          </p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>
